@@ -19,7 +19,7 @@ use \phpbb\template\template;
 /**
  * Event listener
  */
-class Listener implements EventSubscriberInterface
+class listener implements EventSubscriberInterface
 {
     /** @var \rampmaster\onlinetime\core\onlinetime $onlinetime */
     protected $onlinetime;
