@@ -7,10 +7,10 @@
  * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
  * @author Clemens Husung (Wolfsblvt)
  */
-namespace Rampmaster\Onlinetime\Core;
+namespace rampmaster\onlinetime\core;
 
 
-class Formatter
+class formatter
 {
 	/** @var \phpbb\user */
 	protected $user;
@@ -19,7 +19,7 @@ class Formatter
 	 * Constructor
 	 *
 	 * @param \phpbb\user					$user
-	 * @return \Rampmaster\Onlinetime\Core\Formatter
+	 * @return \rampmaster\onlinetime\core\formatter
 	 * @access public
 	 */
 	public function __construct(\phpbb\user $user)
@@ -27,7 +27,7 @@ class Formatter
 		$this->user = $user;
 
 		// Add language vars
-		$this->user->add_lang_ext('Rampmaster/Onlinetime', 'formatter');
+		$this->user->add_lang_ext('rampmaster/onlinetime', 'formatter');
 	}
 
 	/**

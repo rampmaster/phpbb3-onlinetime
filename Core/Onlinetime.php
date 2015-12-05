@@ -8,18 +8,18 @@
  * @author Clemens Husung (Wolfsblvt)
  */
 
-namespace Rampmaster\Onlinetime\Core;
+namespace rampmaster\onlinetime\core;
 
-use Rampmaster\Onlinetime\Core\Formatter;
+use rampmaster\onlinetime\core\formatter;
 use phpbb\db\driver\driver_interface;
 use phpbb\config\config;
 use phpbb\template\template;
 use phpbb\user;
 use phpbb\auth\auth;
 
-class Onlinetime
+class onlinetime
 {
-    /** @var \Rampmaster\Onlinetime\Core\Formatter $formatter */
+    /** @var \rampmaster\onlinetime\core\formatter $formatter */
     protected $formatter;
 
     /** @var \Symfony\Component\DependencyInjection\ContainerInterface $container */
@@ -46,14 +46,14 @@ class Onlinetime
     /**
      * Constructor
      *
-     * @param \Rampmaster\Onlinetime\Core\Formatter $formatter Formatter
+     * @param \rampmaster\onlinetime\core\formatter $formatter Formatter
      * @param \phpbb\db\driver\driver_interface $db Database
      * @param \phpbb\config\config $config Config helper
      * @param \phpbb\template\template $template Template object
      * @param \phpbb\user $user User object
      * @param \phpbb\auth\auth $auth Auth object
      */
-    public function __construct(Formatter $formatter, driver_interface $db, config $config, template $template, user $user, auth $auth)
+    public function __construct(formatter $formatter, driver_interface $db, config $config, template $template, user $user, auth $auth)
     {
         global $phpbb_container;
 
@@ -69,7 +69,7 @@ class Onlinetime
         $this->TABLE_ONLINE_TIME_DAYS = $this->container->getParameter('tables.rampmaster.onlinetime.online_time_days');
 
         // Add language vars
-        $this->user->add_lang_ext('Rampmaster/Onlinetime', 'Onlinetime');
+        $this->user->add_lang_ext('rampmaster/onlinetime', 'onlinetime');
     }
 
     /**
