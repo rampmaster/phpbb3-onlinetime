@@ -6,7 +6,7 @@
 	"version": "0.0.1",
 	"time": "2015-12-05",
 	"keywords": ["phpbb", "extension", "onlinetime"],
-	"license": "MIT",
+	"license": "GPL-2.0",
 	"authors": [
 		{
 			"name": "Clemens Husung (Wolfsblvt)",
