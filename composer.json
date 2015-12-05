@@ -1,5 +1,5 @@
 {
-	"name": "Rampmaster/Onlinetime",
+	"name": "rampmaster/onlinetime",
 	"type": "phpbb-extension",
 	"description": "Keeps track of user total and average online time. Adds it to the user profile.",
 	"homepage": "http://rampmaster.org/phpbb3",
