@@ -1,0 +1,27 @@
+services:
+    rampmaster.onlinetime.listener:
+        class: Rampmaster\Onlinetime\Event\Listener
+        arguments:
+            - @rampmaster.Onlinetime.Onlinetime
+            - @dbal.conn
+            - @path_helper
+            - @template
+            - @user
+            - @request
+        tags:
+            - { name: Event.listener }
+    wolfsblvt.onlinetime.onlinetime:
+        class: wolfsblvt\onlinetime\core\onlinetime
+        arguments:
+            - @wolfsblvt.Onlinetime.formatter
+            - @dbal.conn
+            - @config
+            - @template
+            - @user
+            - @auth
+    wolfsblvt.onlinetime.formatter:
+        class: wolfsblvt\onlinetime\core\formatter
+        arguments:
+            - @user
+imports:
+    - { resource: tables.yml }

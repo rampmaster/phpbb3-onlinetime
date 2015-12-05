@@ -1,0 +1,19 @@
+Actual Version
+**************
+
+-- Version 1.1.1 --------------
+	• Included subsilver2 support
+
+###########################################################################
+Past Versions
+*************
+
+-- Version 1.1.0 --------------
+	• Removed adding language files twice
+	• Implemented check for permissions
+	• Fix: Adding time to the next day if close after midnight
+	• Fix: Updating online time after display
+	
+-- Version 1.0.0 --------------
+	• First implementation for 3.1
+	• Included check for requirements

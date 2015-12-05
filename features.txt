@@ -1,0 +1,15 @@
+Current Features
+****************
+	• Tracks online time of users (total and per day)
+	• Calculates online time from configuration of 'load_online_time' for "who is online?" list
+	• Shows it in easy to read format in member profile
+	• Online time not visible on invisible users profile, except you can see invisibles
+	• Permission to view online time
+	• Permission to hide online time (bound to core permission "Can hide online status")
+	• UCP option to hide online time
+	• Permission to see even hidden online times (bound to core permission "Can view hidden online users")
+	• Full subsilver2 support
+
+Planned Features
+****************
+	• None
