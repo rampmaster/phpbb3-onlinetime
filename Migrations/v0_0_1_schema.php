@@ -8,7 +8,7 @@
  * @author Clemens Husung (Wolfsblvt)
  */
 
-namespace Rampmaster\Onlinetime\Migrations;
+namespace rampmaster\onlinetime\migrations;
 
 use phpbb\db\migration\migration;
 
@@ -43,7 +43,11 @@ class v0_0_1_schema extends migration
 					'PRIMARY_KEY'	=> array('user_id', 'day'),
 				),
 			),
-		);
+            'add_columns'	=> array(
+                $this->table_prefix . 'users'	=> array(
+                    'profile_onlinetime_hide'		=> array('BOOL', 0),
+                ),
+            ),		);
 	}
 
 	public function revert_schema()
@@ -53,6 +57,11 @@ class v0_0_1_schema extends migration
 				$this->table_prefix . $this->table_online_time_name,
 				$this->table_prefix . $this->table_online_time_days_name,
 			),
+            'drop_columns'	=> array(
+                $this->table_prefix . 'users'	=> array(
+                    'profile_onlinetime_hide',
+                ),
+            ),
 		);
 	}
 }

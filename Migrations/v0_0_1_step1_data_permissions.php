@@ -8,13 +8,15 @@
  * @author Clemens Husung (Wolfsblvt)
  */
 
-namespace wolfsblvt\onlinetime\migrations;
+namespace rampmaster\onlinetime\migrations;
 
-class v1_1_0_step1_data_permissions extends \phpbb\db\migration\migration
+use phpbb\db\migration\migration;
+
+class v0_0_1_step1_data_permissions extends migration
 {
 	public static function depends_on()
 	{
-		return array('\wolfsblvt\onlinetime\migrations\v1_1_0_schema');
+		return array('\rampmaster\onlinetime\migrations\v0_0_1_schema');
 	}
 
 	public function update_data()
