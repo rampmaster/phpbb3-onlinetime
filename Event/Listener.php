@@ -57,7 +57,7 @@ class listener implements EventSubscriberInterface
         $this->user = $user;
         $this->request = $request;
 
-        $this->ext_root_path = 'ext/rampamster/onlinetime';
+        $this->ext_root_path = 'ext/rampmaster/onlinetime';
     }
 
     /**
