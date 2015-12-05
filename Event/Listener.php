@@ -114,7 +114,7 @@ class listener implements EventSubscriberInterface
     {
         // Request the user option vars and add them to the data array
         $event['data'] = array_merge($event['data'], array(
-            'rampmaster_onlinetime_hide' => $this->request->variable('rampmaster_onlinetime_hide', (int)$this->user->data['rampmaster_onlinetime_hide']),
+            'profile_onlinetime_hide' => $this->request->variable('profile_onlinetime_hide', (int)$this->user->data['profile_onlinetime_hide']),
         ));
 
         // Output the data vars to the template (except on form submit)
@@ -122,7 +122,7 @@ class listener implements EventSubscriberInterface
             $data = $event['data'];
             $this->user->add_lang_ext('rampmaster/onlinetime', 'onlinetime');
             $this->template->assign_vars(array(
-                'S_ONLINETIME_USER_HIDE' => $data['rampmaster_onlinetime_hide'],
+                'S_ONLINETIME_USER_HIDE' => $data['profile_onlinetime_hide'],
             ));
         }
     }
@@ -137,7 +137,7 @@ class listener implements EventSubscriberInterface
     {
         $data = $event['data'];
         $event['sql_ary'] = array_merge($event['sql_ary'], array(
-            'rampmaster_onlinetime_hide' => $data['rampmaster_onlinetime_hide'],
+            'profile_onlinetime_hide' => $data['profile_onlinetime_hide'],
         ));
     }
 
