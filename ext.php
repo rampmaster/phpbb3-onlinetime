@@ -8,7 +8,7 @@
  * @author Clemens Husung (Wolfsblvt)
  */
 
-namespace Rampmaster\Onlinetime;
+namespace Rampmaster\onlinetime;
 
 class ext extends \phpbb\extension\base
 {
